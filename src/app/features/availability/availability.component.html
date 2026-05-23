@@ -1,0 +1,89 @@
+<section class="hero">
+  <div class="container">
+    <h1>{{ copy().title }}</h1>
+    <p class="lead">{{ copy().intro }}</p>
+    <p class="notice card">{{ copy().notice }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <form class="card form" [formGroup]="form" (ngSubmit)="submit()">
+      <label>
+        <span>{{ copy().form.name }}</span>
+        <input type="text" formControlName="name" />
+        @if (showRequired('name')) {
+          <small class="error">{{ copy().errors.required }}</small>
+        }
+      </label>
+
+      <label>
+        <span>{{ copy().form.email }}</span>
+        <input type="email" formControlName="email" />
+        @if (showRequired('email')) {
+          <small class="error">{{ copy().errors.required }}</small>
+        }
+        @if (form.controls.email.touched && form.controls.email.hasError('email')) {
+          <small class="error">{{ copy().errors.email }}</small>
+        }
+      </label>
+
+      <div class="dates-row">
+        <label>
+          <span>{{ copy().form.checkIn }}</span>
+          <input type="date" formControlName="checkIn" />
+          @if (showRequired('checkIn')) {
+            <small class="error">{{ copy().errors.required }}</small>
+          }
+        </label>
+
+        <label>
+          <span>{{ copy().form.checkOut }}</span>
+          <input type="date" formControlName="checkOut" />
+          @if (showRequired('checkOut')) {
+            <small class="error">{{ copy().errors.required }}</small>
+          }
+        </label>
+      </div>
+
+      @if (form.touched && form.hasError('invalidDates')) {
+        <small class="error">{{ copy().errors.invalidDates }}</small>
+      }
+
+      <div class="dates-row">
+        <label>
+          <span>{{ copy().form.guests }}</span>
+          <input type="number" min="1" max="8" formControlName="guests" />
+          @if (form.controls.guests.touched && form.controls.guests.hasError('min')) {
+            <small class="error">{{ copy().errors.minGuests }}</small>
+          }
+          @if (form.controls.guests.touched && form.controls.guests.hasError('max')) {
+            <small class="error">{{ copy().errors.maxGuests }}</small>
+          }
+        </label>
+
+        <label>
+          <span>{{ copy().form.preferredLanguage }}</span>
+          <select formControlName="preferredLanguage">
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="gl">GL</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        <span>{{ copy().form.notes }}</span>
+        <textarea rows="4" formControlName="notes"></textarea>
+      </label>
+
+      <button type="submit" class="button button-primary" [disabled]="isSending()">
+        {{ copy().form.submit }}
+      </button>
+
+      @if (successMessage()) {
+        <p class="success">{{ successMessage() }}</p>
+      }
+    </form>
+  </div>
+</section>

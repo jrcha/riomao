@@ -1,0 +1,29 @@
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a routerLink="/" class="brand" (click)="closeMenu()">{{ copy().brand }}</a>
+
+    <button class="menu-button" type="button" (click)="toggleMenu()">Menu</button>
+
+    <nav class="nav" [class.nav-open]="menuOpen()">
+      @for (link of navLinks; track link.path) {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="is-active"
+          [routerLinkActiveOptions]="{ exact: !!link.exact }"
+          (click)="closeMenu()"
+        >
+          {{ copy().nav[link.key] }}
+        </a>
+      }
+    </nav>
+
+    <label class="language">
+      <span>Lang</span>
+      <select [value]="locale()" (change)="onLocaleChange($any($event.target).value)">
+        @for (language of languages; track language.code) {
+          <option [value]="language.code">{{ language.label }}</option>
+        }
+      </select>
+    </label>
+  </div>
+</header>

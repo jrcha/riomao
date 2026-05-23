@@ -1,0 +1,25 @@
+<section class="hero">
+  <div class="container">
+    <h1>{{ copy().title }}</h1>
+    <p class="lead">{{ copy().intro }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container gallery-grid">
+    @for (item of images; track item.src) {
+      <figure class="card frame">
+        <img
+          [src]="item.src"
+          [alt]="item.alt[locale()]"
+          loading="lazy"
+          decoding="async"
+          (error)="onImageError($event)"
+        />
+        <figcaption>{{ item.caption[locale()] }}</figcaption>
+      </figure>
+    }
+  </div>
+</section>
+
+

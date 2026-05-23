@@ -1,0 +1,70 @@
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.lead {
+  margin-top: 0.8rem;
+}
+
+.notice {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--sun);
+}
+
+.form {
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  color: var(--ink);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--leaf) 40%, transparent);
+  outline-offset: 1px;
+}
+
+.dates-row {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.error {
+  color: #8a3c2d;
+}
+
+.success {
+  margin-top: 0.2rem;
+  color: var(--leaf-deep);
+  font-weight: 600;
+}
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+@media (max-width: 780px) {
+  .dates-row {
+    grid-template-columns: 1fr;
+  }
+}

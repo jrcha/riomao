@@ -1,0 +1,26 @@
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Galicia · Spain</p>
+      <h1>{{ copy().title }}</h1>
+      <p class="lead">{{ copy().intro }}</p>
+      <div class="actions">
+        <a class="button button-primary" routerLink="/gallery">{{ copy().primaryCta }}</a>
+        <a class="button button-secondary" routerLink="/availability">{{ copy().secondaryCta }}</a>
+      </div>
+    </div>
+
+    <aside class="hero-photo card" aria-label="Riomao village landscape photo"></aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container highlights">
+    @for (item of copy().highlights; track item.title) {
+      <article class="card highlight-card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+    }
+  </div>
+</section>

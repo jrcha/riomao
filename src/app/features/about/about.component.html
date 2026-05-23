@@ -1,0 +1,17 @@
+<section class="hero">
+  <div class="container">
+    <h1>{{ copy().title }}</h1>
+    <p class="lead">{{ copy().intro }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container pillar-grid">
+    @for (pillar of copy().pillars; track pillar.title) {
+      <article class="card pillar">
+        <h3>{{ pillar.title }}</h3>
+        <p>{{ pillar.text }}</p>
+      </article>
+    }
+  </div>
+</section>

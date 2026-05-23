@@ -1,0 +1,69 @@
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.4rem;
+  align-items: stretch;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--leaf);
+  margin-bottom: 0.85rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.2vw, 3.5rem);
+  margin-bottom: 0.9rem;
+}
+
+.lead {
+  font-size: 1.08rem;
+  max-width: 60ch;
+}
+
+.actions {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.hero-photo {
+  min-height: 320px;
+  background:
+    linear-gradient(135deg, rgba(34, 50, 28, 0.2), rgba(0, 0, 0, 0.12)),
+    url('/images/village-main-street.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.highlight-card {
+  padding: 1.15rem;
+}
+
+.highlight-card h3 {
+  margin-bottom: 0.45rem;
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    min-height: 240px;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+}

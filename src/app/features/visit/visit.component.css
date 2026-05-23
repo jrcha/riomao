@@ -1,0 +1,41 @@
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.lead {
+  margin-top: 0.8rem;
+}
+
+.visit-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.facts,
+.map-placeholder {
+  padding: 1.1rem;
+}
+
+.fact-row + .fact-row {
+  border-top: 1px solid var(--line);
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+}
+
+h4 {
+  margin: 0 0 0.3rem;
+  font-family: 'Fraunces', serif;
+}
+
+.map-embed {
+  border-radius: 0.6rem;
+  overflow: hidden;
+  min-height: 340px;
+}
+
+@media (max-width: 900px) {
+  .visit-layout {
+    grid-template-columns: 1fr;
+  }
+}
