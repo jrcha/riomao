@@ -74,7 +74,7 @@ export interface GalleryItem {
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
-    src: '/images/village-main-street.jpg',
+    src: 'images/village-main-street.jpg',
     alt: {
       en: 'Stone street in the village center',
       es: 'Calle de piedra en el centro de la aldea',
@@ -91,7 +91,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     }
   },
   {
-    src: '/images/village-terraces.jpg',
+    src: 'images/village-terraces.jpg',
     alt: {
       en: 'Terraces with green hills behind',
       es: 'Terrazas con colinas verdes al fondo',
@@ -108,7 +108,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     }
   },
   {
-    src: '/images/village-river-path.jpg',
+    src: 'images/village-river-path.jpg',
     alt: {
       en: 'Path near a small river and trees',
       es: 'Sendero junto a un pequeno rio y arboles',
@@ -125,7 +125,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     }
   },
   {
-    src: '/images/village-night-fire.jpg',
+    src: 'images/village-night-fire.jpg',
     alt: {
       en: 'Evening gathering around a fire pit',
       es: 'Encuentro al atardecer alrededor de un fuego',
