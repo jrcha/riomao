@@ -5,10 +5,10 @@ export interface SiteCopy {
   nav: {
     home: string;
     gallery: string;
-    video: string;
-    about: string;
-    visit: string;
-    availability: string;
+    planoDirector: string;
+    imaxes: string;
+    planosUrban: string;
+    casasParcel: string;
   };
   home: {
     title: string;
@@ -16,6 +16,12 @@ export interface SiteCopy {
     primaryCta: string;
     secondaryCta: string;
     highlights: Array<{ title: string; text: string }>;
+  };
+  sections: {
+    planoDirector: { title: string; intro: string };
+    imaxes: { title: string; intro: string };
+    planosUrbanisticos: { title: string; intro: string };
+    casasParcel: { title: string; intro: string; samplePrice: string };
   };
   gallery: {
     title: string;
@@ -145,19 +151,19 @@ export const GALLERY_ITEMS: GalleryItem[] = [
 
 export const SITE_COPY: Record<Locale, SiteCopy> = {
   en: {
-    brand: 'Riomao Eco-Village',
+    brand: 'RIAMOR. O NOVO RIOMAO',
     nav: {
       home: 'Home',
       gallery: 'Gallery',
-      video: 'Video',
-      about: 'About',
-      visit: 'Visit Info',
-      availability: 'Availability Request'
+      planoDirector: 'Master Plan',
+      imaxes: 'Images',
+      planosUrban: 'Urban Plans',
+      casasParcel: 'Properties'
     },
     home: {
-      title: 'A small eco-village in rural Galicia',
+      title: 'RIAMOR. The New Riomao.',
       intro:
-        'Riomao is a quiet place of stone homes, gardens, and slow rhythms. This site helps visitors discover the landscape and village life before they arrive.',
+        'Housing and ecosocial promotion project for an old heritage village at high altitude in the Trevinca valley (Ourense).',
       primaryCta: 'Explore Gallery',
       secondaryCta: 'Request Availability',
       highlights: [
@@ -240,24 +246,43 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       success: 'Your request was sent. We will contact you shortly.'
     },
     footer: {
-      line1: 'Riomao Eco-Village · Galiza',
-      line2: 'Small-scale stays today. Full booking flow in a future release.'
+      line1: 'RIAMOR. O NOVO RIOMAO · Ourense',
+      line2: 'Heritage village rehabilitation project.'
+    },
+    sections: {
+      planoDirector: {
+        title: 'Master Plan for Riomao and Surroundings',
+        intro: 'Integrated rehabilitation strategy for the village and landscape.'
+      },
+      imaxes: {
+        title: 'Landscape and Forest Images',
+        intro: 'A visual journey through the natural beauty of the region.'
+      },
+      planosUrbanisticos: {
+        title: 'Cadastral and Urban Plans',
+        intro: 'Detailed maps and planning documents for Novo Riomao.'
+      },
+      casasParcel: {
+        title: 'Homes and Plots for Sale',
+        intro: 'Discover available properties in Novo Riomao.',
+        samplePrice: 'Starting from €150,000'
+      }
     }
   },
   es: {
-    brand: 'Ecoaldea Riomao',
+    brand: 'RIAMOR. O NOVO RIOMAO',
     nav: {
       home: 'Inicio',
       gallery: 'Galeria',
-      video: 'Video',
-      about: 'Sobre la ecoaldea',
-      visit: 'Informacion de visita',
-      availability: 'Solicitud de disponibilidad'
+      planoDirector: 'Plan Director',
+      imaxes: 'Imágenes',
+      planosUrban: 'Planos Urbanos',
+      casasParcel: 'Propiedades'
     },
     home: {
-      title: 'Una ecoaldea en la Galicia rural',
+      title: 'RIAMOR. El Nuevo Riomao.',
       intro:
-        'Riomao es un lugar tranquilo de casas de piedra, huertas y ritmos lentos. Este sitio ayuda a conocer el entorno y la vida de la aldea antes de viajar.',
+        'Proyecto de promoción habitacional y ecosocial de una vieja aldea patrimonial de alta montaña en la Veiga de Trevinca (Ourense).',
       primaryCta: 'Ver galeria',
       secondaryCta: 'Solicitar disponibilidad',
       highlights: [
@@ -340,24 +365,43 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       success: 'Tu solicitud fue enviada. Te contactaremos pronto.'
     },
     footer: {
-      line1: 'Ecoaldea Riomao · Galicia, Espana',
-      line2: 'Estancias pequenas hoy. Flujo de reserva completo en una futura version.'
+      line1: 'RIAMOR. El Nuevo Riomao · Ourense',
+      line2: 'Proyecto de rehabilitación y promoción habitacional.'
+    },
+    sections: {
+      planoDirector: {
+        title: 'Plan Director de Riomao y alrededores',
+        intro: 'Estrategia de rehabilitación integrada para la aldea y el paisaje.'
+      },
+      imaxes: {
+        title: 'Imágenes del entorno paisajístico y forestal',
+        intro: 'Un viaje visual a través de la belleza natural de la región.'
+      },
+      planosUrbanisticos: {
+        title: 'Planos catastrales y urbanísticos',
+        intro: 'Mapas detallados y documentos de planificación para Novo Riomao.'
+      },
+      casasParcel: {
+        title: 'Casas y parcelas en venta',
+        intro: 'Descubre propiedades disponibles en Novo Riomao.',
+        samplePrice: 'Desde €150.000'
+      }
     }
   },
   gl: {
-    brand: 'Ecoaldea Riomao',
+    brand: 'RIAMOR. O NOVO RIOMAO',
     nav: {
       home: 'Inicio',
       gallery: 'Galeria',
-      video: 'Video',
-      about: 'Sobre a ecoaldea',
-      visit: 'Info da visita',
-      availability: 'Solicitude de dispoñibilidade'
+      planoDirector: 'Plano-Director',
+      imaxes: 'Imaxes',
+      planosUrban: 'Planos Urbanísticos',
+      casasParcel: 'Propiedades'
     },
     home: {
-      title: 'Unha pequena ecoaldea na Galiza rural',
+      title: 'RIAMOR. O NOVO RIOMAO.',
       intro:
-        'Riomao é un lugar tranquilo de casas de pedra, hortas e ritmos lentos. Este sitio axuda a descubrir a paisaxe e a vida da aldea antes da viaxe.',
+        'Proxecto de promoción habitacional e ecosocial dunha vella aldea patrimonial de alta montaña na Veiga de Trevinca (Ourense).',
       primaryCta: 'Ver galeria',
       secondaryCta: 'Solicitar dispoñibilidade',
       highlights: [
@@ -440,23 +484,43 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       success: 'A solicitude foi enviada. Contactaremos contigo axiña.'
     },
     footer: {
-      line1: 'Ecoaldea Riomao · Galicia, Espana',
-      line2: 'Estadias pequenas hoxe. Reserva completa nunha futura version.'
-    }  },
+      line1: 'RIAMOR. O NOVO RIOMAO · Ourense',
+      line2: 'Proxecto de rehabilitación e promoción habitacional.'
+    },
+    sections: {
+      planoDirector: {
+        title: 'Plano-Director de Riomao e contorna',
+        intro: 'Estratexia de rehabilitación integrada para a aldea e a paisaxe.'
+      },
+      imaxes: {
+        title: 'Imaxes da contorna paisaxística e ecoforestal',
+        intro: 'Unha viaxe visual a través da beleza natural da rexión.'
+      },
+      planosUrbanisticos: {
+        title: 'Planos catastrais e urbanísticos',
+        intro: 'Mapas detallados e documentos de planificación para o Novo Riomao.'
+      },
+      casasParcel: {
+        title: 'Casas e parcelas en venda',
+        intro: 'Descobre propiedades dispoñibles no Novo Riomao.',
+        samplePrice: 'Desde €150.000'
+      }
+    }
+  },
   ca: {
-    brand: 'Ecoaldea Riomao',
+    brand: 'RIAMOR. El Nou Riomao',
     nav: {
       home: 'Inici',
       gallery: 'Galeria',
-      video: 'Video',
-      about: 'Sobre la ecoaldea',
-      visit: 'Info de visita',
-      availability: 'Solicitud de disponibilitat'
+      planoDirector: 'Plà Director',
+      imaxes: 'Imatges',
+      planosUrban: 'Plans Urbans',
+      casasParcel: 'Propietats'
     },
     home: {
-      title: 'Una petita ecoaldea a la Galicia rural',
+      title: 'RIAMOR. El Nou Riomao.',
       intro:
-        'Riomao es un lloc tranquil de cases de pedra, horts i ritmes lents. Aquest lloc ajuda a descobrir el paisatge i la vida de la vila abans de viatjar.',
+        'Projecte de promoció habitacional i ecosocial d\'una vella aldea patrimonial d\'alta muntanya a la Veiga de Trevinca (Ourense).',
       primaryCta: 'Veure galeria',
       secondaryCta: 'Solicitar disponibilitat',
       highlights: [
@@ -539,24 +603,43 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       success: 'La teva solicitud ha estat enviada. Ens posarem en contacte aviat.'
     },
     footer: {
-      line1: 'Ecoaldea Riomao · Galicia, Espanya',
-      line2: 'Estades petites avui. Reserva completa en una futura versio.'
+      line1: 'RIAMOR. El Nou Riomao · Ourense',
+      line2: 'Projecte de rehabilitació i promoció habitacional.'
+    },
+    sections: {
+      planoDirector: {
+        title: 'Plà Director de Riomao i entorn',
+        intro: 'Estratègia de rehabilitació integrada pel poble i el paisatge.'
+      },
+      imaxes: {
+        title: 'Imatges del paisatge i l\'ecosistema forestal',
+        intro: 'Un viatge visual a través de la bellesa natural de la regió.'
+      },
+      planosUrbanisticos: {
+        title: 'Plans cadastrals i urbanístics',
+        intro: 'Mapes detallats i documents de planificació per al Nou Riomao.'
+      },
+      casasParcel: {
+        title: 'Cases i parcel·les en venda',
+        intro: 'Descobreix propietats disponibles al Nou Riomao.',
+        samplePrice: 'A partir de €150.000'
+      }
     }
   },
   fr: {
-    brand: 'Ecovillage Riomao',
+    brand: 'RIAMOR. Le Nouveau Riomao',
     nav: {
       home: 'Accueil',
       gallery: 'Galerie',
-      video: 'Video',
-      about: 'A propos',
-      visit: 'Infos de visite',
-      availability: 'Demande de disponibilite'
+      planoDirector: 'Plan Directeur',
+      imaxes: 'Images',
+      planosUrban: 'Plans Urbains',
+      casasParcel: 'Propriétés'
     },
     home: {
-      title: 'Un petit ecovillage en Galice rurale',
+      title: 'RIAMOR. Le Nouveau Riomao.',
       intro:
-        'Riomao est un endroit tranquille de maisons en pierre, de jardins et de rythmes lents. Ce site aide les visiteurs a decouvrir le paysage et la vie du village avant leur arrivee.',
+        'Projet de promotion résidentielle et écosociale pour un vieux village patrimonial en haute montagne dans la vallée de Trevinca (Ourense).',
       primaryCta: 'Voir la galerie',
       secondaryCta: 'Demander la disponibilite',
       highlights: [
@@ -639,7 +722,27 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       success: 'Votre demande a ete envoyee. Nous vous contacterons bientot.'
     },
     footer: {
-      line1: 'Ecovillage Riomao · Galice, Espagne',
-      line2: 'Petits sejours aujourd\'hui. Flux de reservation complet dans une version future.'
-    }  }
+      line1: 'RIAMOR. Le Nouveau Riomao · Ourense',
+      line2: 'Projet de réhabilitation et promotion résidentielle.'
+    },
+    sections: {
+      planoDirector: {
+        title: 'Plan Directeur de Riomao et environs',
+        intro: 'Stratégie de réhabilitation intégrée pour le village et le paysage.'
+      },
+      imaxes: {
+        title: 'Images du paysage et de l\'écosystème forestier',
+        intro: 'Un voyage visuel à travers la beauté naturelle de la région.'
+      },
+      planosUrbanisticos: {
+        title: 'Plans cadastraux et urbanistiques',
+        intro: 'Cartes détaillées et documents de planification pour le Nouveau Riomao.'
+      },
+      casasParcel: {
+        title: 'Maisons et parcelles à vendre',
+        intro: 'Découvrez les propriétés disponibles au Nouveau Riomao.',
+        samplePrice: 'À partir de 150 000 €'
+      }
+    }
+  }
 };

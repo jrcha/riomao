@@ -33,11 +33,11 @@ export class HeaderComponent {
 
   protected readonly navLinks: Array<{ path: string; key: NavKey; exact?: boolean }> = [
     { path: '/', key: 'home', exact: true },
-    { path: '/gallery', key: 'gallery' },
-    { path: '/video', key: 'video' },
-    { path: '/about', key: 'about' },
-    { path: '/visit', key: 'visit' },
-    { path: '/availability', key: 'availability' }
+    { path: '/plano-director', key: 'planoDirector' },
+    { path: '/imaxes', key: 'imaxes' },
+    { path: '/planos-urbanisticos', key: 'planosUrban' },
+    { path: '/propiedades', key: 'casasParcel' },
+    { path: '/gallery', key: 'gallery' }
   ];
 
   protected toggleMenu(): void {

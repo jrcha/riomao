@@ -11,7 +11,6 @@ import { SITE_COPY } from '../../core/site-content';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  private readonly i18n = inject(I18nService);
-
-  protected readonly copy = computed(() => SITE_COPY[this.i18n.locale()].home);
+  private readonly i18nService = inject(I18nService);
+  protected readonly copy = computed(() => SITE_COPY[this.i18nService.locale()].home);
 }

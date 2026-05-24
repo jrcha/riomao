@@ -1,0 +1,11 @@
+.section-content {
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+.highlight-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--leaf);
+  margin: 1.5rem 0;
+}

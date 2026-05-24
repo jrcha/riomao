@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="container">
+    <h1>{{ copy().title }}</h1>
+    <p class="lead">{{ copy().intro }}</p>
+    <div class="gallery-grid">
+      @for (item of galleryItems; track item.src) {
+        <div class="gallery-item card">
+          <img [src]="item.src" [alt]="item.alt[i18n.locale()]" />
+          <p class="caption">{{ item.caption[i18n.locale()] }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
