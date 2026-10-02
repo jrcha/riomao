@@ -1,0 +1,18 @@
+404.html
+  h_d73632852fa230 12
+index.html
+  h_d73632852fa230 12
+main-XR3HLIJF.js
+  h_d73632852fa230 1-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0c92a9384b41f3baaa24bfab877d9dbcf4b7802e",
+  "prompts": {},
+  "humans": {
+    "h_d73632852fa230": {
+      "author": "Javier Rocha Rivera <jrochari@cisco.com>"
+    }
+  }
+}
