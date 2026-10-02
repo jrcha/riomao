@@ -1,0 +1,29 @@
+src/app/features/memoria/memoria.component.html
+  s_e8c625e5dc0276::t_6564f01e3ae44a 1-19
+src/app/features/memoria/memoria.component.css
+  s_e8c625e5dc0276::t_6564f01e3ae44a 1-49
+src/app/core/site-content.ts
+  s_e8c625e5dc0276::t_6564f01e3ae44a 9,325,466,607,748,889
+src/app/shared/components/header/header.component.ts
+  s_e8c625e5dc0276::t_6564f01e3ae44a 39
+src/app/app.routes.ts
+  s_e8c625e5dc0276::t_6564f01e3ae44a 7,17
+src/app/features/memoria/memoria.component.ts
+  s_e8c625e5dc0276::t_6564f01e3ae44a 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "42f445ab2e4f76dbd2376ef6666989f23ec00b20",
+  "prompts": {},
+  "sessions": {
+    "s_e8c625e5dc0276": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "4a19267a-54ec-484a-9508-f8a92a9b7d76",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Javier Rocha Rivera <jrochari@cisco.com>"
+    }
+  }
+}
