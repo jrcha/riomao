@@ -12,7 +12,13 @@
               <h3 class="property-label">{{ property.label }}</h3>
               <p class="property-ref">
                 <span class="property-ref-label">{{ copy().cadastralRefLabel }}:</span>
-                <span class="property-ref-value">{{ property.cadastralRef }}</span>
+                @if (cadastralLookupUrl(property.cadastralRef); as lookupUrl) {
+                  <a class="property-ref-value" [href]="lookupUrl" target="_blank" rel="noopener">
+                    {{ property.cadastralRef }}
+                  </a>
+                } @else {
+                  <span class="property-ref-value">{{ property.cadastralRef }}</span>
+                }
               </p>
               @if (property.notes) {
                 <p class="property-notes">{{ property.notes }}</p>

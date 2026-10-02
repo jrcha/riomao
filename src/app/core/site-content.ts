@@ -3,18 +3,24 @@ import { Locale } from './i18n.service';
 export interface SiteCopy {
   brand: string;
   nav: {
-    home: string;
+    presentation: string;
+    properties: string;
+    residential: string;
+    forestal: string;
+    archive: string;
     gallery: string;
-    planoDirector: string;
     memoria: string;
     imaxes: string;
-    planosUrban: string;
-    casasParcel: string;
+    planos: string;
     fichas: string;
+    navigation: string;
+    menu: string;
+    closeMenu: string;
   };
   home: {
     title: string;
     intro: string;
+    coverImages: { valleyAlt: string; villageAlt: string };
     primaryCta: string;
     secondaryCta: string;
     highlights: Array<{ title: string; text: string }>;
@@ -30,7 +36,16 @@ export interface SiteCopy {
       description: string;
     };
     imaxes: { title: string; intro: string };
-    planosUrbanisticos: { title: string; intro: string };
+    planosUrbanisticos: {
+      title: string;
+      intro: string;
+      analysisLabel: string;
+      interventionsLabel: string;
+      overallLabel: string;
+      view: string;
+      download: string;
+    };
+    contornaForestal: { title: string; intro: string; imageAlt: string };
     casasParcel: {
       title: string;
       intro: string;
@@ -319,20 +334,29 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
   en: {
     brand: 'RIAMOR. O NOVO RIOMAO',
     nav: {
-      home: 'Home',
+      presentation: 'Presentation: Riamor and surroundings',
+      properties: 'Properties for sale',
+      residential: 'Village residential area',
+      forestal: 'Forest surroundings: the 50 ha Great Chestnut Grove of Riomao, natural monument',
+      archive: 'Archive: graphic documentation and press news',
       gallery: 'Gallery',
-      planoDirector: 'Master Plan',
-      memoria: 'Memoria',
+      memoria: 'Memoria of the integral rehabilitation master plan',
       imaxes: 'Images',
-      planosUrban: 'Urban Plans',
-      casasParcel: 'Properties',
-      fichas: 'Building Records'
+      planos: 'Plans',
+      fichas: 'Building records',
+      navigation: 'Navigation',
+      menu: 'Menu',
+      closeMenu: 'Close menu'
     },
     home: {
       title: 'RIAMOR. The New Riomao.',
       intro:
         'Housing and ecosocial promotion project for an old heritage village at high altitude in the Trevinca valley (Ourense).',
-      primaryCta: 'Explore Gallery',
+      coverImages: {
+        valleyAlt: 'Forested valley surrounding Riomao',
+        villageAlt: 'Traditional village houses among trees in Riomao'
+      },
+      primaryCta: 'View memory',
       secondaryCta: 'Request Availability',
       highlights: [
         {
@@ -434,7 +458,17 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       },
       planosUrbanisticos: {
         title: 'Cadastral and Urban Plans',
-        intro: 'Detailed maps and planning documents for Novo Riomao.'
+        intro: 'Detailed maps and planning documents for Novo Riomao.',
+        analysisLabel: 'General analysis',
+        interventionsLabel: 'Specific interventions',
+        overallLabel: 'Overall plan',
+        view: 'View',
+        download: 'Download'
+      },
+      contornaForestal: {
+        title: 'Forest surroundings',
+        intro: 'The Gran Souto de Riomao covers 50 ha and is a natural monument.',
+        imageAlt: 'Forested valley and chestnut woodland surrounding Riomao'
       },
       casasParcel: {
         title: 'Homes and Plots for Sale',
@@ -460,20 +494,29 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
   es: {
     brand: 'RIAMOR. O NOVO RIOMAO',
     nav: {
-      home: 'Inicio',
-      gallery: 'Galeria',
-      planoDirector: 'Plan Director',
-      memoria: 'Memoria',
+      presentation: 'Presentación: Riamor y su entorno',
+      properties: 'Propiedades en venta',
+      residential: 'Núcleo residencial de la aldea',
+      forestal: 'Entorno forestal: el Gran Souto de Riomao, 50 ha, monumento natural',
+      archive: 'Archivo: documentación gráfica y noticias de prensa',
+      gallery: 'Galería',
+      memoria: 'Memoria del plan director de rehabilitación integral',
       imaxes: 'Imágenes',
-      planosUrban: 'Planos Urbanos',
-      casasParcel: 'Propiedades',
-      fichas: 'Fichas'
+      planos: 'Planos',
+      fichas: 'Fichas',
+      navigation: 'Navegación',
+      menu: 'Menú',
+      closeMenu: 'Cerrar menú'
     },
     home: {
       title: 'RIAMOR. El Nuevo Riomao.',
       intro:
         'Proyecto de promoción habitacional y ecosocial de una vieja aldea patrimonial de alta montaña en la Veiga de Trevinca (Ourense).',
-      primaryCta: 'Ver galeria',
+      coverImages: {
+        valleyAlt: 'Valle boscoso que rodea Riomao',
+        villageAlt: 'Casas tradicionales entre los árboles de Riomao'
+      },
+      primaryCta: 'Ver memoria',
       secondaryCta: 'Solicitar disponibilidad',
       highlights: [
         {
@@ -575,7 +618,17 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       },
       planosUrbanisticos: {
         title: 'Planos catastrales y urbanísticos',
-        intro: 'Mapas detallados y documentos de planificación para Novo Riomao.'
+        intro: 'Mapas detallados y documentos de planificación para Novo Riomao.',
+        analysisLabel: 'Análisis general',
+        interventionsLabel: 'Intervenciones concretas',
+        overallLabel: 'Plano general',
+        view: 'Ver',
+        download: 'Descargar'
+      },
+      contornaForestal: {
+        title: 'Entorno forestal',
+        intro: 'El Gran Souto de Riomao abarca 50 ha y es monumento natural.',
+        imageAlt: 'Valle boscoso y souto de castaños que rodean Riomao'
       },
       casasParcel: {
         title: 'Casas y parcelas en venta',
@@ -601,20 +654,29 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
   gl: {
     brand: 'RIAMOR. O NOVO RIOMAO',
     nav: {
-      home: 'Inicio',
-      gallery: 'Galeria',
-      planoDirector: 'Plano-Director',
-      memoria: 'Memoria',
+      presentation: 'Presentación: Riamor e contorna',
+      properties: 'Propiedades en venda',
+      residential: 'Núcleo residencial da aldea',
+      forestal: 'Contorna forestal: o Gran Souto de Riomao de 50 ha, monumento natural',
+      archive: 'Arquivo: documentación gráfica e novas de prensa',
+      gallery: 'Galería',
+      memoria: 'Memoria do plan director de rehabilitación integral',
       imaxes: 'Imaxes',
-      planosUrban: 'Planos Urbanísticos',
-      casasParcel: 'Propiedades',
-      fichas: 'Fichas'
+      planos: 'Planos',
+      fichas: 'Fichas',
+      navigation: 'Navegación',
+      menu: 'Menú',
+      closeMenu: 'Pechar menú'
     },
     home: {
       title: 'RIAMOR. O NOVO RIOMAO.',
       intro:
         'Proxecto de promoción habitacional e ecosocial dunha vella aldea patrimonial de alta montaña na Veiga de Trevinca (Ourense).',
-      primaryCta: 'Ver galeria',
+      coverImages: {
+        valleyAlt: 'Val arborado que rodea Riomao',
+        villageAlt: 'Casas tradicionais entre as árbores de Riomao'
+      },
+      primaryCta: 'Ver memoria',
       secondaryCta: 'Solicitar dispoñibilidade',
       highlights: [
         {
@@ -716,7 +778,17 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       },
       planosUrbanisticos: {
         title: 'Planos catastrais e urbanísticos',
-        intro: 'Mapas detallados e documentos de planificación para o Novo Riomao.'
+        intro: 'Mapas detallados e documentos de planificación para o Novo Riomao.',
+        analysisLabel: 'Análise xeral',
+        interventionsLabel: 'Intervencións concretas',
+        overallLabel: 'Plano xeral',
+        view: 'Ver',
+        download: 'Descargar'
+      },
+      contornaForestal: {
+        title: 'Contorna forestal',
+        intro: 'O Gran Souto de Riomao abrangue 50 ha e é monumento natural.',
+        imageAlt: 'Val arborado e souto de castiñeiros que rodean Riomao'
       },
       casasParcel: {
         title: 'Casas e parcelas en venda',
@@ -742,20 +814,29 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
   ca: {
     brand: 'RIAMOR. El Nou Riomao',
     nav: {
-      home: 'Inici',
+      presentation: 'Presentació: Riamor i entorn',
+      properties: 'Propietats en venda',
+      residential: 'Nucli residencial del poble',
+      forestal: 'Entorn forestal: el Gran Souto de Riomao, 50 ha, monument natural',
+      archive: 'Arxiu: documentació gràfica i notícies de premsa',
       gallery: 'Galeria',
-      planoDirector: 'Plà Director',
-      memoria: 'Memòria',
+      memoria: 'Memòria del pla director de rehabilitació integral',
       imaxes: 'Imatges',
-      planosUrban: 'Plans Urbans',
-      casasParcel: 'Propietats',
-      fichas: 'Fitxes'
+      planos: 'Plànols',
+      fichas: 'Fitxes',
+      navigation: 'Navegació',
+      menu: 'Menú',
+      closeMenu: 'Tanca el menú'
     },
     home: {
       title: 'RIAMOR. El Nou Riomao.',
       intro:
         'Projecte de promoció habitacional i ecosocial d\'una vella aldea patrimonial d\'alta muntanya a la Veiga de Trevinca (Ourense).',
-      primaryCta: 'Veure galeria',
+      coverImages: {
+        valleyAlt: 'Vall boscosa que envolta Riomao',
+        villageAlt: 'Cases tradicionals entre els arbres de Riomao'
+      },
+      primaryCta: 'Veure memòria',
       secondaryCta: 'Solicitar disponibilitat',
       highlights: [
         {
@@ -857,7 +938,17 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       },
       planosUrbanisticos: {
         title: 'Plans cadastrals i urbanístics',
-        intro: 'Mapes detallats i documents de planificació per al Nou Riomao.'
+        intro: 'Mapes detallats i documents de planificació per al Nou Riomao.',
+        analysisLabel: 'Anàlisi general',
+        interventionsLabel: 'Intervencions concretes',
+        overallLabel: 'Plànol general',
+        view: 'Veure',
+        download: 'Descarregar'
+      },
+      contornaForestal: {
+        title: 'Entorn forestal',
+        intro: 'El Gran Souto de Riomao abasta 50 ha i és monument natural.',
+        imageAlt: 'Vall boscosa i castanyer que envolten Riomao'
       },
       casasParcel: {
         title: 'Cases i parcel·les en venda',
@@ -883,20 +974,29 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
   fr: {
     brand: 'RIAMOR. Le Nouveau Riomao',
     nav: {
-      home: 'Accueil',
+      presentation: 'Présentation : Riamor et ses environs',
+      properties: 'Propriétés à vendre',
+      residential: 'Noyau résidentiel du village',
+      forestal: 'Environnement forestier : le Gran Souto de Riomao, 50 ha, monument naturel',
+      archive: 'Archives : documentation graphique et actualités de presse',
       gallery: 'Galerie',
-      planoDirector: 'Plan Directeur',
-      memoria: 'Mémoire',
+      memoria: 'Mémoire du plan directeur de réhabilitation intégrale',
       imaxes: 'Images',
-      planosUrban: 'Plans Urbains',
-      casasParcel: 'Propriétés',
-      fichas: 'Fiches'
+      planos: 'Plans',
+      fichas: 'Fiches',
+      navigation: 'Navigation',
+      menu: 'Menu',
+      closeMenu: 'Fermer le menu'
     },
     home: {
       title: 'RIAMOR. Le Nouveau Riomao.',
       intro:
         'Projet de promotion résidentielle et écosociale pour un vieux village patrimonial en haute montagne dans la vallée de Trevinca (Ourense).',
-      primaryCta: 'Voir la galerie',
+      coverImages: {
+        valleyAlt: 'Vallée boisée autour de Riomao',
+        villageAlt: 'Maisons traditionnelles parmi les arbres de Riomao'
+      },
+      primaryCta: 'Voir la mémoire',
       secondaryCta: 'Demander la disponibilite',
       highlights: [
         {
@@ -998,7 +1098,17 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       },
       planosUrbanisticos: {
         title: 'Plans cadastraux et urbanistiques',
-        intro: 'Cartes détaillées et documents de planification pour le Nouveau Riomao.'
+        intro: 'Cartes détaillées et documents de planification pour le Nouveau Riomao.',
+        analysisLabel: 'Analyse générale',
+        interventionsLabel: 'Interventions concrètes',
+        overallLabel: 'Plan général',
+        view: 'Voir',
+        download: 'Télécharger'
+      },
+      contornaForestal: {
+        title: 'Environnement forestier',
+        intro: 'Le Gran Souto de Riomao couvre 50 ha et est un monument naturel.',
+        imageAlt: 'Vallée boisée et châtaigneraie autour de Riomao'
       },
       casasParcel: {
         title: 'Maisons et parcelles à vendre',

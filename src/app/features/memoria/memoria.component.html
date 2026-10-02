@@ -1,7 +1,15 @@
 <section class="section">
   <div class="container">
-    <h1>Memoria</h1>
+    <h1>{{ copy().titleFull }}</h1>
+    <p class="lead">{{ copy().intro }}</p>
     <div class="card section-content">
+      <p class="plan-meta">
+        <span class="plan-year">{{ copy().year }}</span>
+        &nbsp;&mdash;&nbsp;
+        <span class="plan-association">{{ copy().association }}</span>
+      </p>
+      <p class="plan-association-full">{{ copy().associationFull }}</p>
+      <p class="plan-description">{{ copy().description }}</p>
       <div class="document-toolbar">
         <h2>Memo Riomao Mayo 09.pdf</h2>
         <div class="document-actions">

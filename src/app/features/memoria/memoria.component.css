@@ -27,6 +27,27 @@
   color: var(--leaf);
 }
 
+.plan-meta {
+  margin: 0 0 0.5rem;
+  color: var(--stone, #8a7a6a);
+}
+
+.plan-year,
+.plan-association {
+  font-weight: 600;
+}
+
+.plan-association-full {
+  margin: 0 0 1rem;
+  color: var(--stone, #8a7a6a);
+  font-style: italic;
+}
+
+.plan-description {
+  margin: 0 0 1.5rem;
+  line-height: 1.7;
+}
+
 .pdf-viewer {
   display: block;
   width: 100%;

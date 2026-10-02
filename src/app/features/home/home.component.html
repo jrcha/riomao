@@ -1,17 +1,30 @@
 <section class="hero">
-  <div class="container hero-grid">
-    <div>
+  <div class="container hero-content">
       <p class="eyebrow">Galicia · Spain</p>
       <h1>{{ copy().title }}</h1>
       <p class="lead">{{ copy().intro }}</p>
+      <div class="presentation-copy">
+        <p>Convén salientar que a aldea de Ríomao da Veiga e a contorna forestal na que se insire, i. é un macro-souto de preto de 50 hectáreas de monocultivo tradicional de castiñeiro, constitúen un auténtico MONUMENTO NATURAL DA GALICIA, DE ALTA MONTAÑA.</p>
+        <p>A aldea, inscrita no cerne dese Gran Souto, mantén a arquitectura tradicional, característica dun poboamento de máis de 400 anos de antigüidade, inevitabelmente estragada pero en estado propicio para a súa recuperación sen perda de identidade do conxunto.</p>
+        <p>A Asociación sociocultural de Propietarios e Veciños “Santo Tomé” de Ríomao (AVESSATOR), fundada en 2005 e formada por uns 30 socios e socias na actualidade, traballa dende entón nun proxecto de rehabilitación integral da aldea e do gran souto de castiñeiros, con nulos apoios administrativos e económicos.</p>
+        <p>Excepto en 2008-2009 en que obtivo o aval e o apoio, por medio de subvención en libre concorrencia competitiva, da Consellería de Medio Rural, dirixida por Suárez Canal, da Xunta de Galicia para a redacción dun Plan Director que, dada a carencia dende entón de políticas públicas a este respecto dos gobernos do PP, permanece sen implementar nin executar.</p>
+        <p>Arestora, a Asociación de Propietarios e Veciños AVESSATOR centra os seus esforzos e relacións coa Administración en conseguir as condicións básicas de habitabilidade e a repoboación da aldea. Priorizando o acondicionamento dun vial interior vertebrador de todo o núcleo; e a creación dun páxina web “Riamor.O novo Ríomao” con información sobre o lugar, ofertas e promoción de casas e terras. Móbii de contacto: 697981638.</p>
+      </div>
       <div class="actions">
-        <a class="button button-primary" routerLink="/plano-director">{{ copy().primaryCta }}</a>
+        <a class="button button-primary" routerLink="/memoria">{{ copy().primaryCta }}</a>
         <a class="button button-secondary" routerLink="/propiedades">{{ copy().secondaryCta }}</a>
       </div>
-    </div>
+  </div>
+</section>
 
-    <aside class="hero-photo card" aria-label="Riomao village landscape photo"
-      [style.backgroundImage]="'linear-gradient(135deg, rgba(34,50,28,0.2), rgba(0,0,0,0.12)), url(images/village-main-street.jpg)'"></aside>
+<section class="cover-gallery" aria-label="Riomao e contorna">
+  <div class="container cover-grid">
+    <figure class="cover-photo">
+      <img src="/images/portada1.jpeg" [alt]="copy().coverImages.valleyAlt" fetchpriority="high" />
+    </figure>
+    <figure class="cover-photo">
+      <img src="/images/portada2.jpeg" [alt]="copy().coverImages.villageAlt" />
+    </figure>
   </div>
 </section>
 

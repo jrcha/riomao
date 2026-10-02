@@ -17,6 +17,50 @@
       } @else {
         <p class="fallback-message">{{ asset.fallback[locale()] }}</p>
       }
+      <div class="plan-document-groups">
+        <section class="plan-document-group">
+          <h2>{{ copy().analysisLabel }}</h2>
+          <ul>
+            @for (fileName of planDocuments.analysis; track fileName) {
+              <li>
+                <span>{{ fileName }}</span>
+                <span class="plan-document-actions">
+                  <a [href]="documentUrl(fileName)" target="_blank" rel="noopener">{{ copy().view }}</a>
+                  <a [href]="documentUrl(fileName)" [attr.download]="fileName">{{ copy().download }}</a>
+                </span>
+              </li>
+            }
+          </ul>
+        </section>
+        <section class="plan-document-group">
+          <h2>{{ copy().interventionsLabel }}</h2>
+          <ul>
+            @for (fileName of planDocuments.interventions; track fileName) {
+              <li>
+                <span>{{ fileName }}</span>
+                <span class="plan-document-actions">
+                  <a [href]="documentUrl(fileName)" target="_blank" rel="noopener">{{ copy().view }}</a>
+                  <a [href]="documentUrl(fileName)" [attr.download]="fileName">{{ copy().download }}</a>
+                </span>
+              </li>
+            }
+          </ul>
+        </section>
+        <section class="plan-document-group">
+          <h2>{{ copy().overallLabel }}</h2>
+          <ul>
+            @for (fileName of planDocuments.overall; track fileName) {
+              <li>
+                <span>{{ fileName }}</span>
+                <span class="plan-document-actions">
+                  <a [href]="documentUrl(fileName)" target="_blank" rel="noopener">{{ copy().view }}</a>
+                  <a [href]="documentUrl(fileName)" [attr.download]="fileName">{{ copy().download }}</a>
+                </span>
+              </li>
+            }
+          </ul>
+        </section>
+      </div>
     </div>
   </div>
 </section>

@@ -2,18 +2,55 @@
   <div class="container topbar-inner">
     <a routerLink="/" class="brand" (click)="closeMenu()">{{ copy().brand }}</a>
 
-    <button class="menu-button" type="button" (click)="toggleMenu()">Menu</button>
+    <button
+      class="menu-button"
+      type="button"
+      aria-controls="site-navigation"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()"
+      (keydown.escape)="closeMenu()"
+    >
+      {{ menuOpen() ? copy().nav.closeMenu : copy().nav.menu }}
+    </button>
 
-    <nav class="nav" [class.nav-open]="menuOpen()">
-      @for (link of navLinks; track link.path) {
-        <a
-          [routerLink]="link.path"
-          routerLinkActive="is-active"
-          [routerLinkActiveOptions]="{ exact: !!link.exact }"
-          (click)="closeMenu()"
-        >
-          {{ copy().nav[link.key] }}
-        </a>
+    <nav
+      id="site-navigation"
+      class="nav"
+      [hidden]="!menuOpen()"
+      [attr.aria-label]="copy().nav.navigation"
+      (keydown.escape)="closeMenu()"
+    >
+      @for (link of navLinks; track link.key) {
+        <section class="nav-section">
+          @if (link.path) {
+            <a
+              class="nav-heading"
+              [routerLink]="link.path"
+              routerLinkActive="is-active"
+              [routerLinkActiveOptions]="{ exact: !!link.exact }"
+              (click)="closeMenu()"
+            >
+              {{ copy().nav[link.key] }}
+            </a>
+          } @else {
+            <h2 class="nav-heading">{{ copy().nav[link.key] }}</h2>
+          }
+          @if (link.children) {
+            <ul>
+              @for (child of link.children; track child.path) {
+                <li>
+                  <a
+                    [routerLink]="child.path"
+                    routerLinkActive="is-active"
+                    (click)="closeMenu()"
+                  >
+                    {{ copy().nav[child.key] }}
+                  </a>
+                </li>
+              }
+            </ul>
+          }
+        </section>
       }
     </nav>
 

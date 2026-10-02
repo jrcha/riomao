@@ -1,8 +1,5 @@
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.4rem;
-  align-items: stretch;
+.hero-content {
+  max-width: 58rem;
 }
 
 .eyebrow {
@@ -23,6 +20,18 @@ h1 {
   max-width: 60ch;
 }
 
+.presentation-copy {
+  display: grid;
+  gap: 0.8rem;
+  max-width: 78ch;
+  margin-top: 1.5rem;
+  line-height: 1.65;
+}
+
+.presentation-copy p {
+  margin: 0;
+}
+
 .actions {
   margin-top: 1.2rem;
   display: flex;
@@ -30,11 +39,27 @@ h1 {
   gap: 0.7rem;
 }
 
-.hero-photo {
-  min-height: 320px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.cover-gallery {
+  padding: 0 0 2rem;
+}
+
+.cover-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.cover-photo {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.cover-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .highlights {
@@ -52,12 +77,8 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  .hero-grid {
+  .cover-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero-photo {
-    min-height: 240px;
   }
 
   .highlights {

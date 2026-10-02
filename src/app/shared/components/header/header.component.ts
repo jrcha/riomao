@@ -6,6 +6,8 @@ import { I18nService, Locale } from '../../../core/i18n.service';
 import { SITE_COPY, SiteCopy } from '../../../core/site-content';
 
 type NavKey = keyof SiteCopy['nav'];
+type MenuChild = { path: string; key: NavKey; exact?: boolean };
+type MenuItem = { key: NavKey; path?: string; exact?: boolean; children?: MenuChild[] };
 
 @Component({
   selector: 'app-header',
@@ -31,15 +33,25 @@ export class HeaderComponent {
     { code: 'fr', label: 'FR' }
   ];
 
-  protected readonly navLinks: Array<{ path: string; key: NavKey; exact?: boolean }> = [
-    { path: '/', key: 'home', exact: true },
-    { path: '/plano-director', key: 'planoDirector' },
-    { path: '/fichas', key: 'fichas' },
-    { path: '/imaxes', key: 'imaxes' },
+  protected readonly navLinks: MenuItem[] = [
+    { path: '/', key: 'presentation', exact: true },
+    { path: '/propiedades', key: 'properties' },
     { path: '/memoria', key: 'memoria' },
-    { path: '/planos-urbanisticos', key: 'planosUrban' },
-    { path: '/propiedades', key: 'casasParcel' },
-    { path: '/gallery', key: 'gallery' }
+    {
+      key: 'residential',
+      children: [
+        { path: '/fichas', key: 'fichas' },
+        { path: '/planos-urbanisticos', key: 'planos' }
+      ]
+    },
+    { path: '/contorna-forestal', key: 'forestal' },
+    {
+      key: 'archive',
+      children: [
+        { path: '/imaxes', key: 'imaxes' },
+        { path: '/gallery', key: 'gallery' }
+      ]
+    }
   ];
 
   protected toggleMenu(): void {
