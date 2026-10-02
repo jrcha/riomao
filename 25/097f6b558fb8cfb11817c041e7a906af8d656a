@@ -1,0 +1,71 @@
+src/app/features/fichas/fichas.component.ts
+  s_b04272be61a91e::t_5731ed0dbf35c8 1-24
+src/app/core/site-content.ts
+  h_d73632852fa230 12,40-51,113-118,281-290,326-327,443-454,466-467,583-594,606-607,723-734,746-747,863-874,886-887,1003-1014
+  h_d73632852fa230 22-30,33-39,108-112,119-128,200-280,291-316,421-427,440-442,561-567,580-582,701-707,720-722,841-847,860-862,981-987,1000-1002
+src/app/features/fichas/fichas.component.html
+  s_b04272be61a91e::t_c9ad6dc083523e 1-33
+src/app/features/plano-director/plano-director.component.html
+  s_b04272be61a91e::t_5b6dfe777445d8 14
+  s_b04272be61a91e::t_1028f23a100d5a 11-13
+  h_d73632852fa230 6-10
+src/app/features/propiedades/propiedades.component.html
+  s_b04272be61a91e::t_5b6dfe777445d8 19-24
+  s_b04272be61a91e::t_53332032d79d9f 16-18
+  s_b04272be61a91e::t_1e318c0dd4c171 25-27
+  h_d73632852fa230 6-15,28
+src/app/app.routes.ts
+  s_b04272be61a91e::t_5b6dfe777445d8 4,14
+src/app/features/propiedades/propiedades.component.css
+  s_b04272be61a91e::t_5b6dfe777445d8 16,25,30,35,41,46,51,56,59,63-70
+  s_b04272be61a91e::t_8260febcdcba25 13-15
+  s_b04272be61a91e::t_6dd52b9d9d9878 17-19,22-24
+  s_b04272be61a91e::t_4b041588ba1751 26-29
+  s_b04272be61a91e::t_421d130350120b 31-34
+  s_b04272be61a91e::t_b11538316c2e9b 36-40
+  s_b04272be61a91e::t_fca1254fe8c80b 42-45
+  s_b04272be61a91e::t_320e4a2fc402aa 47-50
+  s_b04272be61a91e::t_104e54e03b2ad3 52-55
+  s_b04272be61a91e::t_0b47e68ac7789e 57-58
+  s_b04272be61a91e::t_fc18ad415c8d8d 60-62
+  h_d73632852fa230 12,20-21
+src/app/features/fichas/fichas.component.css
+  s_b04272be61a91e::t_2773b700557e21 1-62
+src/app/features/propiedades/propiedades.component.ts
+  s_b04272be61a91e::t_5b6dfe777445d8 15
+  s_b04272be61a91e::t_23927a7741b2c8 16-17
+  h_d73632852fa230 4
+src/app/shared/components/header/header.component.ts
+  s_b04272be61a91e::t_5b6dfe777445d8 37
+src/app/features/plano-director/plano-director.component.ts
+  s_b04272be61a91e::t_f73035ae27977e 2,9,16
+src/app/features/plano-director/plano-director.component.css
+  h_d73632852fa230 5-35
+src/app/features/planos-urbanisticos/planos-urbanisticos.component.css
+  h_d73632852fa230 5-36
+src/app/features/planos-urbanisticos/planos-urbanisticos.component.html
+  h_d73632852fa230 6-19
+src/app/features/planos-urbanisticos/planos-urbanisticos.component.ts
+  h_d73632852fa230 1,4,15-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "25097f6b558fb8cfb11817c041e7a906af8d656a",
+  "prompts": {},
+  "humans": {
+    "h_d73632852fa230": {
+      "author": "Javier Rocha Rivera <jrochari@cisco.com>"
+    }
+  },
+  "sessions": {
+    "s_b04272be61a91e": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "ee556d5c-d2c6-41cc-b634-3897eab25995",
+        "model": "claude-opus-5.5"
+      },
+      "human_author": "Javier Rocha Rivera <jrochari@cisco.com>"
+    }
+  }
+}
