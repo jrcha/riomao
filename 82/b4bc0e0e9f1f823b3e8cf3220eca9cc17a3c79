@@ -1,0 +1,18 @@
+404.html
+  h_d73632852fa230 12
+index.html
+  h_d73632852fa230 12
+main-ZPDAVGVE.js
+  h_d73632852fa230 1,3-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "82b4bc0e0e9f1f823b3e8cf3220eca9cc17a3c79",
+  "prompts": {},
+  "humans": {
+    "h_d73632852fa230": {
+      "author": "Javier Rocha Rivera <jrochari@cisco.com>"
+    }
+  }
+}
