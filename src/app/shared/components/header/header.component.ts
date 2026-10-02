@@ -34,6 +34,7 @@ export class HeaderComponent {
   protected readonly navLinks: Array<{ path: string; key: NavKey; exact?: boolean }> = [
     { path: '/', key: 'home', exact: true },
     { path: '/plano-director', key: 'planoDirector' },
+    { path: '/fichas', key: 'fichas' },
     { path: '/imaxes', key: 'imaxes' },
     { path: '/planos-urbanisticos', key: 'planosUrban' },
     { path: '/propiedades', key: 'casasParcel' },

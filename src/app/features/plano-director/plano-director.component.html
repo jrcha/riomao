@@ -3,7 +3,15 @@
     <h1>{{ copy().title }}</h1>
     <p class="lead">{{ copy().intro }}</p>
     <div class="card section-content">
-      <p>Master plan documents and visualizations coming soon.</p>
+      <p class="plan-title-full">{{ copy().titleFull }}</p>
+      <p class="plan-meta">
+        <span class="plan-year">{{ copy().year }}</span>
+        &nbsp;&mdash;&nbsp;
+        <span class="plan-association">{{ copy().association }}</span>
+      </p>
+      <p class="plan-association-full">{{ copy().associationFull }}</p>
+      <p class="plan-description">{{ copy().description }}</p>
+      <p><a routerLink="/fichas">{{ fichasCopy().planLink }}</a></p>
     </div>
   </div>
 </section>

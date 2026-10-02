@@ -9,6 +9,7 @@ export interface SiteCopy {
     imaxes: string;
     planosUrban: string;
     casasParcel: string;
+    fichas: string;
   };
   home: {
     title: string;
@@ -18,10 +19,36 @@ export interface SiteCopy {
     highlights: Array<{ title: string; text: string }>;
   };
   sections: {
-    planoDirector: { title: string; intro: string };
+    planoDirector: {
+      title: string;
+      intro: string;
+      titleFull: string;
+      year: number;
+      association: string;
+      associationFull: string;
+      description: string;
+    };
     imaxes: { title: string; intro: string };
     planosUrbanisticos: { title: string; intro: string };
-    casasParcel: { title: string; intro: string; samplePrice: string };
+    casasParcel: {
+      title: string;
+      intro: string;
+      samplePrice: string;
+      emptyState: string;
+      cadastralRefLabel: string;
+    };
+    fichas: {
+      title: string;
+      intro: string;
+      languageNote: string;
+      filterLabel: string;
+      filterPlaceholder: string;
+      noResults: string;
+      view: string;
+      download: string;
+      viewFicha: string;
+      planLink: string;
+    };
   };
   gallery: {
     title: string;
@@ -76,6 +103,27 @@ export interface GalleryItem {
   src: string;
   alt: Record<Locale, string>;
   caption: Record<Locale, string>;
+}
+
+export interface PropertyForSale {
+  id: string;
+  label: string;
+  cadastralRef: string;
+  notes?: string;
+  buildingCode?: string;
+}
+
+export interface BuildingRecord {
+  code: string;
+  file: string;
+}
+
+export interface CadastralPlanAsset {
+  src: string;
+  alt: Record<Locale, string>;
+  caption: Record<Locale, string>;
+  fallback: Record<Locale, string>;
+  attribution: string;
 }
 
 export const GALLERY_ITEMS: GalleryItem[] = [
@@ -149,6 +197,123 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   }
 ];
 
+export const PROPERTIES_FOR_SALE: PropertyForSale[] = [
+  {
+    id: 'prop-01',
+    label: 'Vivenda nº 16 do núcleo urbano',
+    cadastralRef: '000500600PG68G0001AE',
+    notes: 'Superficie construída 132 m², en dúas plantas de 66 m²'
+  },
+  {
+    id: 'prop-02',
+    label: 'Casa-vivenda do núcleo urbano (polígono 33, parcela 1138)',
+    cadastralRef: '32084A033011380000RO',
+    notes: 'Superficie construída 24 m², piso con baixo de 12 m² cada un'
+  },
+  {
+    id: 'prop-03',
+    label: 'Casa-vivenda do núcleo urbano',
+    cadastralRef: '000500800PG6800001YE',
+    notes: 'Superficie construída 157 m²: planta baixa-almacén 77 m², planta alta-vivenda 80 m², sobre parcela de 83 m²'
+  },
+  {
+    id: 'prop-04',
+    label: 'Casa-vivenda nº 17 do núcleo urbano',
+    cadastralRef: '000500700PG68G0001BE',
+    notes: 'Superficie construída 66 m²: planta baixa-almacén 33 m², planta primeira-vivenda 33 m², sobre parcela de 69 m²'
+  },
+  {
+    id: 'prop-05',
+    label: 'Casa-vivenda nº 19 do núcleo urbano',
+    cadastralRef: '000500900PG68G0001GE',
+    notes: 'Superficie construída 198 m² sobre parcela de 62 m²: planta baixa-almacén 55 m², planta primeira 71 m², planta segunda 72 m²'
+  },
+  {
+    id: 'prop-06',
+    label: 'Casa-vivenda nº 5 do núcleo urbano',
+    cadastralRef: '000400500PG68G0001BE',
+    notes: 'Sobre parcela de 166 m² construídos, tres corpos: almacén 91 m², edificación agraria 33 m², almacén 56 m²'
+  },
+  {
+    id: 'prop-07',
+    label: 'Casa-vivenda nº 13 do núcleo urbano',
+    cadastralRef: '000500300PG68G0001UE',
+    notes: 'Superficie construída 112 m² sobre parcela de 56 m²: planta baixa-almacén 53 m², planta primeira-vivenda 59 m²'
+  },
+  {
+    id: 'prop-08',
+    label: 'Casa-vivenda do núcleo urbano',
+    cadastralRef: '32084A033011400000RM',
+    notes: 'Superficie construída total 84 m² sobre parcela de 37 m²: planta baixa 37 m², planta primeira 37 m², almacén anexo 9 m²'
+  },
+  {
+    id: 'prop-09',
+    label: 'Casa-vivenda en planta baixa',
+    cadastralRef: '32084A032011300000RF',
+    notes: 'Superficie construída 72 m² sobre terreo de 72 m²'
+  },
+  {
+    id: 'prop-10',
+    label: 'Almacén-palleira do núcleo urbano',
+    cadastralRef: 'Sen referencia catastral',
+    notes: 'Superficie construída 50 m², en dúas plantas de 25 m² cada unha'
+  },
+  {
+    id: 'prop-11',
+    label: 'Adega-almacén do núcleo urbano',
+    cadastralRef: 'Sen referencia catastral',
+    notes: 'Superficie construída 40 m², en dúas plantas de 20 m² cada unha'
+  },
+  {
+    id: 'prop-12',
+    label: 'Casa-vivenda do núcleo urbano',
+    cadastralRef: 'Sen rexistrar nin catastrar',
+    notes: 'Superficie construída 100 m²: planta baixa e alta de 45 m² cada unha, máis leñeira de 10 m²'
+  },
+  {
+    id: 'prop-13',
+    label: 'Vivenda-palleira de planta baixa do núcleo urbano',
+    cadastralRef: 'Sen rexistrar nin catastrar',
+    notes: 'Superficie construída 40 m²'
+  }
+];
+
+// Building record sheets (fichas) from the 2009 master plan; codes have gaps by design.
+export const BUILDING_RECORDS: BuildingRecord[] = [
+  1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 13, 14, 15, 18, 22, 23, 24, 26, 27, 28, 30, 31, 34, 35, 36, 37, 39, 41, 42, 43, 44,
+  47, 49, 50, 52, 53, 55, 56, 57, 58, 59, 60, 61, 62, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83,
+  84
+].map((n) => {
+  const code = `C${String(n).padStart(2, '0')}`;
+  return { code, file: `fichas/${code}.pdf` };
+});
+
+export const CADASTRAL_PLAN_ASSET: CadastralPlanAsset = {
+  src: 'images/plano-catastral-riomao.jpg',
+  alt: {
+    en: 'Cadastral plan map of Riomao village',
+    es: 'Plano catastral de la aldea de Riomao',
+    gl: 'Plano catastral da aldea de Riomao',
+    ca: 'Plànol cadastral del poble de Riomao',
+    fr: 'Plan cadastral du village de Riomao'
+  },
+  caption: {
+    en: 'Cadastral plan of Riomao (source: Catastro de España)',
+    es: 'Plano catastral de Riomao (fuente: Catastro de España)',
+    gl: 'Plano catastral de Riomao (fonte: Catastro de España)',
+    ca: 'Plànol cadastral de Riomao (font: Catastro de España)',
+    fr: 'Plan cadastral de Riomao (source: Catastro de España)'
+  },
+  fallback: {
+    en: 'The cadastral plan image is temporarily unavailable.',
+    es: 'La imagen del plano catastral no está disponible temporalmente.',
+    gl: 'A imaxe do plano catastral non está dispoñible temporalmente.',
+    ca: "La imatge del plànol cadastral no està disponible temporalment.",
+    fr: "L'image du plan cadastral est temporairement indisponible."
+  },
+  attribution: 'Fonte: Catastro de España'
+};
+
 export const SITE_COPY: Record<Locale, SiteCopy> = {
   en: {
     brand: 'RIAMOR. O NOVO RIOMAO',
@@ -158,7 +323,8 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       planoDirector: 'Master Plan',
       imaxes: 'Images',
       planosUrban: 'Urban Plans',
-      casasParcel: 'Properties'
+      casasParcel: 'Properties',
+      fichas: 'Building Records'
     },
     home: {
       title: 'RIAMOR. The New Riomao.',
@@ -252,7 +418,13 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
     sections: {
       planoDirector: {
         title: 'Master Plan for Riomao and Surroundings',
-        intro: 'Integrated rehabilitation strategy for the village and landscape.'
+        intro: 'Integrated rehabilitation strategy for the village and landscape.',
+        titleFull: 'Integral Rehabilitation Master Plan for Riomao and Surroundings (2009)',
+        year: 2009,
+        association: 'AVESSATOR',
+        associationFull: "Socio-cultural Residents' Association of Santo Tomé de Riomao",
+        description:
+          'Strategic document produced by AVESSATOR in 2009 defining the integral rehabilitation of the village of Riomao and its surroundings. It covers the general analysis of the built heritage, the condition of existing buildings, and the specific interventions proposed for residential and landscape recovery.'
       },
       imaxes: {
         title: 'Landscape and Forest Images',
@@ -265,7 +437,21 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       casasParcel: {
         title: 'Homes and Plots for Sale',
         intro: 'Discover available properties in Novo Riomao.',
-        samplePrice: 'Starting from €150,000'
+        samplePrice: 'Starting from €150,000',
+        emptyState: 'No properties are currently listed for sale.',
+        cadastralRefLabel: 'Cadastral reference'
+      },
+      fichas: {
+        title: 'Building Records',
+        intro: 'Individual record sheets for each building analysed in the 2009 Master Plan: current condition, photographs, intervention level and estimated cost.',
+        languageNote: 'Documents are available in their original language (Spanish).',
+        filterLabel: 'Filter by code',
+        filterPlaceholder: 'e.g. C01',
+        noResults: 'No building records match that code.',
+        view: 'View',
+        download: 'Download',
+        viewFicha: 'View building record',
+        planLink: 'See the building records'
       }
     }
   },
@@ -277,7 +463,8 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       planoDirector: 'Plan Director',
       imaxes: 'Imágenes',
       planosUrban: 'Planos Urbanos',
-      casasParcel: 'Propiedades'
+      casasParcel: 'Propiedades',
+      fichas: 'Fichas'
     },
     home: {
       title: 'RIAMOR. El Nuevo Riomao.',
@@ -371,7 +558,13 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
     sections: {
       planoDirector: {
         title: 'Plan Director de Riomao y alrededores',
-        intro: 'Estrategia de rehabilitación integrada para la aldea y el paisaje.'
+        intro: 'Estrategia de rehabilitación integrada para la aldea y el paisaje.',
+        titleFull: 'Plan Director de Rehabilitación Integral de Riomao y Entorno (2009)',
+        year: 2009,
+        association: 'AVESSATOR',
+        associationFull: 'Asociación de Vecinos Sociocultural Santo Tomé de Riomao',
+        description:
+          'Documento estratégico elaborado por la AVESSATOR en 2009 que define la rehabilitación integral de la aldea de Riomao y su entorno. Recoge el análisis general del patrimonio construido, el estado de las edificaciones y las intervenciones concretas propuestas para la recuperación habitacional y paisajística del lugar.'
       },
       imaxes: {
         title: 'Imágenes del entorno paisajístico y forestal',
@@ -384,7 +577,21 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       casasParcel: {
         title: 'Casas y parcelas en venta',
         intro: 'Descubre propiedades disponibles en Novo Riomao.',
-        samplePrice: 'Desde €150.000'
+        samplePrice: 'Desde €150.000',
+        emptyState: 'No hay propiedades disponibles actualmente.',
+        cadastralRefLabel: 'Referencia catastral'
+      },
+      fichas: {
+        title: 'Fichas de edificaciones',
+        intro: 'Fichas individuales de cada edificación analizada en el Plan Director de 2009: estado actual, fotografías, nivel de intervención y presupuesto estimado.',
+        languageNote: 'Los documentos están disponibles en su idioma original (castellano).',
+        filterLabel: 'Filtrar por código',
+        filterPlaceholder: 'p. ej. C01',
+        noResults: 'Ninguna ficha coincide con ese código.',
+        view: 'Ver',
+        download: 'Descargar',
+        viewFicha: 'Ver ficha',
+        planLink: 'Consultar las fichas de edificaciones'
       }
     }
   },
@@ -396,7 +603,8 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       planoDirector: 'Plano-Director',
       imaxes: 'Imaxes',
       planosUrban: 'Planos Urbanísticos',
-      casasParcel: 'Propiedades'
+      casasParcel: 'Propiedades',
+      fichas: 'Fichas'
     },
     home: {
       title: 'RIAMOR. O NOVO RIOMAO.',
@@ -490,7 +698,13 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
     sections: {
       planoDirector: {
         title: 'Plano-Director de Riomao e contorna',
-        intro: 'Estratexia de rehabilitación integrada para a aldea e a paisaxe.'
+        intro: 'Estratexia de rehabilitación integrada para a aldea e a paisaxe.',
+        titleFull: 'Plan Director de Rehabilitación Integral de Riomao e Contorna (2009)',
+        year: 2009,
+        association: 'AVESSATOR',
+        associationFull: 'Asociación de Veciños Sociocultural Santo Tomé de Riomao',
+        description:
+          'Documento estratéxico elaborado pola AVESSATOR en 2009 que define a rehabilitación integral da aldea de Riomao e a súa contorna. Recolle a análise xeral do patrimonio construído, o estado das edificacións e as intervencións concretas propostas para a recuperación habitacional e paisaxística do lugar.'
       },
       imaxes: {
         title: 'Imaxes da contorna paisaxística e ecoforestal',
@@ -503,7 +717,21 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       casasParcel: {
         title: 'Casas e parcelas en venda',
         intro: 'Descobre propiedades dispoñibles no Novo Riomao.',
-        samplePrice: 'Desde €150.000'
+        samplePrice: 'Desde €150.000',
+        emptyState: 'Non hai propiedades dispoñibles actualmente.',
+        cadastralRefLabel: 'Referencia catastral'
+      },
+      fichas: {
+        title: 'Fichas das edificacións',
+        intro: 'Fichas individuais de cada edificación analizada no Plano Director de 2009: estado actual, fotografías, nivel de intervención e orzamento estimado.',
+        languageNote: 'Os documentos están dispoñibles na súa lingua orixinal (castelán).',
+        filterLabel: 'Filtrar por código',
+        filterPlaceholder: 'p. ex. C01',
+        noResults: 'Ningunha ficha coincide con ese código.',
+        view: 'Ver',
+        download: 'Descargar',
+        viewFicha: 'Ver ficha',
+        planLink: 'Consultar as fichas das edificacións'
       }
     }
   },
@@ -515,7 +743,8 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       planoDirector: 'Plà Director',
       imaxes: 'Imatges',
       planosUrban: 'Plans Urbans',
-      casasParcel: 'Propietats'
+      casasParcel: 'Propietats',
+      fichas: 'Fitxes'
     },
     home: {
       title: 'RIAMOR. El Nou Riomao.',
@@ -609,7 +838,13 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
     sections: {
       planoDirector: {
         title: 'Plà Director de Riomao i entorn',
-        intro: 'Estratègia de rehabilitació integrada pel poble i el paisatge.'
+        intro: 'Estratègia de rehabilitació integrada pel poble i el paisatge.',
+        titleFull: 'Pla Director de Rehabilitació Integral de Riomao i Entorn (2009)',
+        year: 2009,
+        association: 'AVESSATOR',
+        associationFull: "Associació de Veïns Sociocultural Sant Tomàs de Riomao",
+        description:
+          "Document estratègic elaborat per l'AVESSATOR el 2009 que defineix la rehabilitació integral del poble de Riomao i el seu entorn. Recull l'anàlisi general del patrimoni construït, l'estat de les edificacions i les intervencions concretes proposades per a la recuperació habitacional i paisatgística del lloc."
       },
       imaxes: {
         title: 'Imatges del paisatge i l\'ecosistema forestal',
@@ -622,7 +857,21 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       casasParcel: {
         title: 'Cases i parcel·les en venda',
         intro: 'Descobreix propietats disponibles al Nou Riomao.',
-        samplePrice: 'A partir de €150.000'
+        samplePrice: 'A partir de €150.000',
+        emptyState: 'Ara mateix no hi ha propietats disponibles.',
+        cadastralRefLabel: 'Referència cadastral'
+      },
+      fichas: {
+        title: 'Fitxes de les edificacions',
+        intro: 'Fitxes individuals de cada edificació analitzada al Pla Director de 2009: estat actual, fotografies, nivell d\'intervenció i pressupost estimat.',
+        languageNote: 'Els documents estan disponibles en la seva llengua original (castellà).',
+        filterLabel: 'Filtra per codi',
+        filterPlaceholder: 'p. ex. C01',
+        noResults: 'Cap fitxa coincideix amb aquest codi.',
+        view: 'Veure',
+        download: 'Descarregar',
+        viewFicha: 'Veure fitxa',
+        planLink: 'Consulta les fitxes de les edificacions'
       }
     }
   },
@@ -634,7 +883,8 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       planoDirector: 'Plan Directeur',
       imaxes: 'Images',
       planosUrban: 'Plans Urbains',
-      casasParcel: 'Propriétés'
+      casasParcel: 'Propriétés',
+      fichas: 'Fiches'
     },
     home: {
       title: 'RIAMOR. Le Nouveau Riomao.',
@@ -728,7 +978,13 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
     sections: {
       planoDirector: {
         title: 'Plan Directeur de Riomao et environs',
-        intro: 'Stratégie de réhabilitation intégrée pour le village et le paysage.'
+        intro: 'Stratégie de réhabilitation intégrée pour le village et le paysage.',
+        titleFull: 'Plan Directeur de Réhabilitation Intégrale de Riomao et Environs (2009)',
+        year: 2009,
+        association: 'AVESSATOR',
+        associationFull: 'Association des Riverains Socioculturels de Saint-Thomas de Riomao',
+        description:
+          "Document stratégique élaboré par l'AVESSATOR en 2009 définissant la réhabilitation intégrale du village de Riomao et de ses environs. Il comprend l'analyse générale du patrimoine bâti, l'état des bâtiments et les interventions concrètes proposées pour la réhabilitation résidentielle et paysagère du lieu."
       },
       imaxes: {
         title: 'Images du paysage et de l\'écosystème forestier',
@@ -741,7 +997,21 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       casasParcel: {
         title: 'Maisons et parcelles à vendre',
         intro: 'Découvrez les propriétés disponibles au Nouveau Riomao.',
-        samplePrice: 'À partir de 150 000 €'
+        samplePrice: 'À partir de 150 000 €',
+        emptyState: "Aucune propriété n'est actuellement disponible.",
+        cadastralRefLabel: 'Référence cadastrale'
+      },
+      fichas: {
+        title: 'Fiches des bâtiments',
+        intro: 'Fiches individuelles de chaque bâtiment analysé dans le Plan Directeur de 2009 : état actuel, photographies, niveau d\'intervention et coût estimé.',
+        languageNote: 'Les documents sont disponibles dans leur langue d\'origine (espagnol).',
+        filterLabel: 'Filtrer par code',
+        filterPlaceholder: 'ex. C01',
+        noResults: 'Aucune fiche ne correspond à ce code.',
+        view: 'Voir',
+        download: 'Télécharger',
+        viewFicha: 'Voir la fiche',
+        planLink: 'Consulter les fiches des bâtiments'
       }
     }
   }

@@ -2,3 +2,34 @@
   padding: 2rem;
   margin-top: 1.5rem;
 }
+
+.plan-title-full {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.plan-meta {
+  font-size: 1rem;
+  color: var(--stone, #8a7a6a);
+  margin-bottom: 0.5rem;
+}
+
+.plan-year {
+  font-weight: 600;
+}
+
+.plan-association {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.plan-association-full {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--stone, #8a7a6a);
+}
+
+.plan-description {
+  line-height: 1.7;
+}

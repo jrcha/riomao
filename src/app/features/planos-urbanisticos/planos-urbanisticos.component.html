@@ -3,7 +3,20 @@
     <h1>{{ copy().title }}</h1>
     <p class="lead">{{ copy().intro }}</p>
     <div class="card section-content">
-      <p>Urban planning documents and cadastral maps coming soon.</p>
+      @if (imageAvailable()) {
+        <figure class="cadastral-figure">
+          <img
+            class="cadastral-image"
+            [src]="asset.src"
+            [alt]="asset.alt[locale()]"
+            (error)="onImageError()"
+          />
+          <figcaption class="cadastral-caption">{{ asset.caption[locale()] }}</figcaption>
+          <p class="cadastral-attribution">{{ asset.attribution }}</p>
+        </figure>
+      } @else {
+        <p class="fallback-message">{{ asset.fallback[locale()] }}</p>
+      }
     </div>
   </div>
 </section>

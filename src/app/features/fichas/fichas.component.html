@@ -1,0 +1,33 @@
+<section class="section">
+  <div class="container">
+    <h1>{{ copy().title }}</h1>
+    <p class="lead">{{ copy().intro }}</p>
+    <div class="card section-content">
+      <p class="language-note">{{ copy().languageNote }}</p>
+      <label class="filter">
+        <span>{{ copy().filterLabel }}</span>
+        <input
+          type="search"
+          [placeholder]="copy().filterPlaceholder"
+          [value]="query()"
+          (input)="onQuery($any($event.target).value)"
+        />
+      </label>
+      @if (records().length === 0) {
+        <p class="empty-state">{{ copy().noResults }}</p>
+      } @else {
+        <ul class="ficha-grid">
+          @for (record of records(); track record.code) {
+            <li class="ficha-item" [id]="record.code">
+              <span class="ficha-code">{{ record.code }}</span>
+              <span class="ficha-actions">
+                <a [href]="record.file" target="_blank" rel="noopener">{{ copy().view }}</a>
+                <a [href]="record.file" [attr.download]="'ficha-' + record.code + '.pdf'">{{ copy().download }}</a>
+              </span>
+            </li>
+          }
+        </ul>
+      }
+    </div>
+  </div>
+</section>
