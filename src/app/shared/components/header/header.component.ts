@@ -36,6 +36,7 @@ export class HeaderComponent {
     { path: '/plano-director', key: 'planoDirector' },
     { path: '/fichas', key: 'fichas' },
     { path: '/imaxes', key: 'imaxes' },
+    { path: '/memoria', key: 'memoria' },
     { path: '/planos-urbanisticos', key: 'planosUrban' },
     { path: '/propiedades', key: 'casasParcel' },
     { path: '/gallery', key: 'gallery' }

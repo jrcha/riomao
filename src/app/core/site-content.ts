@@ -6,6 +6,7 @@ export interface SiteCopy {
     home: string;
     gallery: string;
     planoDirector: string;
+    memoria: string;
     imaxes: string;
     planosUrban: string;
     casasParcel: string;
@@ -321,6 +322,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       home: 'Home',
       gallery: 'Gallery',
       planoDirector: 'Master Plan',
+      memoria: 'Memoria',
       imaxes: 'Images',
       planosUrban: 'Urban Plans',
       casasParcel: 'Properties',
@@ -461,6 +463,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       home: 'Inicio',
       gallery: 'Galeria',
       planoDirector: 'Plan Director',
+      memoria: 'Memoria',
       imaxes: 'Imágenes',
       planosUrban: 'Planos Urbanos',
       casasParcel: 'Propiedades',
@@ -601,6 +604,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       home: 'Inicio',
       gallery: 'Galeria',
       planoDirector: 'Plano-Director',
+      memoria: 'Memoria',
       imaxes: 'Imaxes',
       planosUrban: 'Planos Urbanísticos',
       casasParcel: 'Propiedades',
@@ -741,6 +745,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       home: 'Inici',
       gallery: 'Galeria',
       planoDirector: 'Plà Director',
+      memoria: 'Memòria',
       imaxes: 'Imatges',
       planosUrban: 'Plans Urbans',
       casasParcel: 'Propietats',
@@ -881,6 +886,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
       home: 'Accueil',
       gallery: 'Galerie',
       planoDirector: 'Plan Directeur',
+      memoria: 'Mémoire',
       imaxes: 'Images',
       planosUrban: 'Plans Urbains',
       casasParcel: 'Propriétés',
