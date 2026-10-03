@@ -1,17 +1,20 @@
-<section class="section">
+<section class="section property-page">
   <div class="container">
-    <h1>{{ copy().title }}</h1>
-    <p class="lead">{{ copy().intro }}</p>
-    <div class="card section-content">
-      @if (isEmpty()) {
-        <p class="empty-state">{{ copy().emptyState }}</p>
-      } @else {
-        <ul class="property-list">
-          @for (property of properties; track property.id) {
-            <li class="property-item">
-              <h3 class="property-label">{{ property.label }}</h3>
+    <h1 class="property-title">{{ copy().title }}</h1>
+    <p class="lead property-lead">{{ copy().intro }}</p>
+    @if (isEmpty()) {
+      <p class="empty-state">{{ copy().emptyState }}</p>
+    } @else {
+      <ul class="property-list">
+        @for (property of properties; track property.id) {
+          <li class="property-item">
+            <h2 class="property-label">{{ property.label }}</h2>
+            @if (property.notes) {
+              <p class="property-notes">{{ property.notes }}</p>
+            }
+            <div class="property-record">
               <p class="property-ref">
-                <span class="property-ref-label">{{ copy().cadastralRefLabel }}:</span>
+                <span class="property-ref-label">{{ copy().cadastralRefLabel }}</span>
                 @if (cadastralLookupUrl(property.cadastralRef); as lookupUrl) {
                   <a class="property-ref-value" [href]="lookupUrl" target="_blank" rel="noopener">
                     {{ property.cadastralRef }}
@@ -20,18 +23,15 @@
                   <span class="property-ref-value">{{ property.cadastralRef }}</span>
                 }
               </p>
-              @if (property.notes) {
-                <p class="property-notes">{{ property.notes }}</p>
-              }
               @if (property.buildingCode) {
                 <a class="property-ficha" [href]="'fichas/' + property.buildingCode + '.pdf'" target="_blank" rel="noopener">
                   {{ fichasCopy().viewFicha }} {{ property.buildingCode }}
                 </a>
               }
-            </li>
-          }
-        </ul>
-      }
-    </div>
+            </div>
+          </li>
+        }
+      </ul>
+    }
   </div>
 </section>

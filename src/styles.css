@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap');
 
 :root {
-	--bg: #f2efe8;
-	--bg-deep: #e6dbc7;
-	--surface: #faf8f3;
-	--surface-strong: #f0eadf;
-	--ink: #2d2a24;
-	--ink-soft: #575147;
-	--leaf: #4f6a44;
-	--leaf-deep: #34462d;
-	--sun: #bc8f5d;
-	--line: #d2c3af;
-	--max-width: 1100px;
-	--radius: 18px;
-	--shadow: 0 12px 30px rgba(45, 42, 36, 0.12);
+	--bg: #f3f5f0;
+	--bg-deep: #e6ece4;
+	--surface: #fffefa;
+	--surface-strong: #e8eee7;
+	--ink: #26332c;
+	--ink-soft: #536158;
+	--leaf: #3e654c;
+	--leaf-deep: #294936;
+	--sun: #b96549;
+	--line: #d2dbd2;
+	--max-width: 1180px;
+	--radius: 8px;
+	--shadow: 0 8px 24px rgba(38, 51, 44, 0.08);
 }
 
 * {
@@ -30,9 +30,7 @@ body {
 	font-family: 'Manrope', sans-serif;
 	color: var(--ink);
 	background:
-		radial-gradient(circle at 15% 0%, #fffaf0 0%, transparent 34%),
-		radial-gradient(circle at 80% 18%, #e5d8c3 0%, transparent 35%),
-		linear-gradient(180deg, var(--bg) 0%, #efe7d9 65%, var(--bg-deep) 100%);
+		linear-gradient(180deg, #f8faf6 0%, var(--bg) 62%, var(--bg-deep) 100%);
 	line-height: 1.5;
 }
 
@@ -89,7 +87,7 @@ a {
 	align-items: center;
 	justify-content: center;
 	border: 0;
-	border-radius: 999px;
+	border-radius: 4px;
 	padding: 0.72rem 1.2rem;
 	text-decoration: none;
 	font-weight: 600;
@@ -110,6 +108,11 @@ a {
 	background: var(--surface-strong);
 	color: var(--leaf-deep);
 	border: 1px solid var(--line);
+}
+
+:focus-visible {
+	outline: 3px solid var(--sun);
+	outline-offset: 3px;
 }
 
 @media (max-width: 800px) {

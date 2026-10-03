@@ -41,7 +41,7 @@ export class PlanosUrbanisticosComponent {
   protected readonly imageAvailable = signal(true);
 
   protected documentUrl(fileName: string): string {
-    return `/planos/${encodeURIComponent(fileName)}`;
+    return `planos/${encodeURIComponent(fileName)}`;
   }
 
   protected onImageError(): void {

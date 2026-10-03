@@ -357,7 +357,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         villageAlt: 'Traditional village houses among trees in Riomao'
       },
       primaryCta: 'View memory',
-      secondaryCta: 'Request Availability',
+      secondaryCta: 'Explore properties',
       highlights: [
         {
           title: 'Village life',
@@ -517,7 +517,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         villageAlt: 'Casas tradicionales entre los árboles de Riomao'
       },
       primaryCta: 'Ver memoria',
-      secondaryCta: 'Solicitar disponibilidad',
+      secondaryCta: 'Ver propiedades',
       highlights: [
         {
           title: 'Vida de aldea',
@@ -677,7 +677,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         villageAlt: 'Casas tradicionais entre as árbores de Riomao'
       },
       primaryCta: 'Ver memoria',
-      secondaryCta: 'Solicitar dispoñibilidade',
+      secondaryCta: 'Ver propiedades',
       highlights: [
         {
           title: 'Vida de aldea',
@@ -837,7 +837,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         villageAlt: 'Cases tradicionals entre els arbres de Riomao'
       },
       primaryCta: 'Veure memòria',
-      secondaryCta: 'Solicitar disponibilitat',
+      secondaryCta: 'Veure propietats',
       highlights: [
         {
           title: 'Vida de vila',
@@ -997,7 +997,7 @@ export const SITE_COPY: Record<Locale, SiteCopy> = {
         villageAlt: 'Maisons traditionnelles parmi les arbres de Riomao'
       },
       primaryCta: 'Voir la mémoire',
-      secondaryCta: 'Demander la disponibilite',
+      secondaryCta: 'Voir les propriétés',
       highlights: [
         {
           title: 'Vie villageoise',

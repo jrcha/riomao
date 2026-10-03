@@ -28,6 +28,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/riomao/",
               "budgets": [
                 {
                   "type": "initial",

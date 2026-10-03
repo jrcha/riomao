@@ -1,8 +1,21 @@
-<section class="hero">
+<section class="hero-scene">
+  <img class="hero-image" src="images/portada1.jpeg" [alt]="copy().coverImages.valleyAlt" fetchpriority="high" />
   <div class="container hero-content">
-      <p class="eyebrow">Galicia · Spain</p>
-      <h1>{{ copy().title }}</h1>
-      <p class="lead">{{ copy().intro }}</p>
+    <p class="eyebrow">A Veiga de Trevinca · Ourense</p>
+    <h1>{{ copy().title }}</h1>
+    <p class="lead">{{ copy().intro }}</p>
+    <a class="button button-primary" routerLink="/propiedades">{{ copy().secondaryCta }}</a>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="container story-grid">
+    <figure class="story-photo">
+      <img src="images/portada2.jpeg" [alt]="copy().coverImages.villageAlt" loading="lazy" decoding="async" />
+    </figure>
+    <div class="story-copy">
+      <p class="eyebrow">Ríomao da Veiga</p>
+      <h2>A aldea e o Gran Souto</h2>
       <div class="presentation-copy">
         <p>Convén salientar que a aldea de Ríomao da Veiga e a contorna forestal na que se insire, i. é un macro-souto de preto de 50 hectáreas de monocultivo tradicional de castiñeiro, constitúen un auténtico MONUMENTO NATURAL DA GALICIA, DE ALTA MONTAÑA.</p>
         <p>A aldea, inscrita no cerne dese Gran Souto, mantén a arquitectura tradicional, característica dun poboamento de máis de 400 anos de antigüidade, inevitabelmente estragada pero en estado propicio para a súa recuperación sen perda de identidade do conxunto.</p>
@@ -10,21 +23,8 @@
         <p>Excepto en 2008-2009 en que obtivo o aval e o apoio, por medio de subvención en libre concorrencia competitiva, da Consellería de Medio Rural, dirixida por Suárez Canal, da Xunta de Galicia para a redacción dun Plan Director que, dada a carencia dende entón de políticas públicas a este respecto dos gobernos do PP, permanece sen implementar nin executar.</p>
         <p>Arestora, a Asociación de Propietarios e Veciños AVESSATOR centra os seus esforzos e relacións coa Administración en conseguir as condicións básicas de habitabilidade e a repoboación da aldea. Priorizando o acondicionamento dun vial interior vertebrador de todo o núcleo; e a creación dun páxina web “Riamor.O novo Ríomao” con información sobre o lugar, ofertas e promoción de casas e terras. Móbii de contacto: 697981638.</p>
       </div>
-      <div class="actions">
-        <a class="button button-primary" routerLink="/memoria">{{ copy().primaryCta }}</a>
-        <a class="button button-secondary" routerLink="/propiedades">{{ copy().secondaryCta }}</a>
-      </div>
-  </div>
-</section>
-
-<section class="cover-gallery" aria-label="Riomao e contorna">
-  <div class="container cover-grid">
-    <figure class="cover-photo">
-      <img src="/images/portada1.jpeg" [alt]="copy().coverImages.valleyAlt" fetchpriority="high" />
-    </figure>
-    <figure class="cover-photo">
-      <img src="/images/portada2.jpeg" [alt]="copy().coverImages.villageAlt" />
-    </figure>
+      <a class="button button-secondary story-action" routerLink="/memoria">{{ copy().primaryCta }}</a>
+    </div>
   </div>
 </section>
 
