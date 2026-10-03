@@ -1,0 +1,59 @@
+src/app/features/home/home.component.css
+  s_e8c625e5dc0276::t_0f5ea281838e7a 1-2,42-62,80
+  s_e8c625e5dc0276::t_19b45aaf66b6e0 23-34
+src/app/features/memoria/memoria.component.ts
+  s_e8c625e5dc0276::t_0f5ea281838e7a 1-4,11-14
+src/app/shared/components/header/header.component.css
+  s_e8c625e5dc0276::t_c31153f17e17a7 11,14,27-42,45-55,57-70,73,79-80,85,104-105,107-108,113-120,123-124,128-132,135-136
+src/app/features/planos-urbanisticos/planos-urbanisticos.component.html
+  s_e8c625e5dc0276::t_0f5ea281838e7a 20-63
+src/app/core/site-content.ts
+  s_e8c625e5dc0276::t_ebc60b441e7945 359,519,679,839,999
+  s_e8c625e5dc0276::t_802c5ca666931c 23,39-48,355-358,461-471,515-518,621-631,675-678,781-791,835-838,941-951,995-998,1101-1111
+  s_e8c625e5dc0276::t_4a93ac827f986e 343,661
+  s_e8c625e5dc0276::t_16ba0078311084 6-10,14,16-18,337-341,345-349,497-503,505-509,657-660,662-663,665-669,817-821,823,825-829,977-981,983,985-989
+src/app/features/memoria/memoria.component.html
+  s_e8c625e5dc0276::t_0f5ea281838e7a 3-4,6-12
+src/app/features/planos-urbanisticos/planos-urbanisticos.component.css
+  s_e8c625e5dc0276::t_0f5ea281838e7a 37-83
+src/app/features/contorna-forestal/contorna-forestal.component.ts
+  s_e8c625e5dc0276::t_0f5ea281838e7a 1-14
+src/app/shared/components/header/header.component.ts
+  s_e8c625e5dc0276::t_c31153f17e17a7 9-10,36-38,40-54
+src/app/features/home/home.component.html
+  s_e8c625e5dc0276::t_19b45aaf66b6e0 6-12
+  s_e8c625e5dc0276::t_0f5ea281838e7a 2,14,17-18,20-27
+src/app/features/propiedades/propiedades.component.ts
+  s_e8c625e5dc0276::t_c312945551035c 18-30
+src/app/features/planos-urbanisticos/planos-urbanisticos.component.ts
+  s_e8c625e5dc0276::t_0f5ea281838e7a 6-28,40,43-45
+  s_e8c625e5dc0276::t_c7e037914a82a8 46
+src/app/features/contorna-forestal/contorna-forestal.component.css
+  s_e8c625e5dc0276::t_0f5ea281838e7a 1-10
+src/app/shared/components/header/header.component.html
+  s_e8c625e5dc0276::t_c31153f17e17a7 5-14,16-53
+src/app/features/contorna-forestal/contorna-forestal.component.html
+  s_e8c625e5dc0276::t_0f5ea281838e7a 1-9
+src/app/features/propiedades/propiedades.component.html
+  s_e8c625e5dc0276::t_c312945551035c 15-21
+src/app/features/memoria/memoria.component.css
+  s_e8c625e5dc0276::t_0f5ea281838e7a 30-50
+src/app/app.routes.ts
+  s_e8c625e5dc0276::t_0f5ea281838e7a 7,14,18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "aa10404d1e429e3808991e53733c8cef8cd79b50",
+  "prompts": {},
+  "sessions": {
+    "s_e8c625e5dc0276": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "4a19267a-54ec-484a-9508-f8a92a9b7d76",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Javier Rocha Rivera <jrochari@cisco.com>"
+    }
+  }
+}
